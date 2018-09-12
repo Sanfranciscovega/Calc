@@ -14,6 +14,6 @@
 	<input type="number" id="field1" name="field2" step="0.00001"> 
 	
 	<!-- Send form --> 
-	<input type="submit" id="sender" name="button">
+	<input type="submit" id="sender" name="button" value="Calculer">
 	
 </form>
