@@ -35,7 +35,7 @@
 				<input type="button" class="d3" name="b2" value="." onclick="doCalc('.')">
 				<!-- Send form --> 
 				<input type="submit" class="d3" name="calculate" value="=">
-				<input type="button" class="d3" name="/" value="/">
+				<input type="button" class="d3" name="/" value="/" onclick="doCalc('/')">
 			</div>
 		</form>
 	</div>
