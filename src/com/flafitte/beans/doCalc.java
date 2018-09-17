@@ -42,7 +42,8 @@ public class doCalc {
 		}
 	}
 	
-	
+	// Performs huge values like 5.2*65+36/8 etc.
+	// Store result in var result
 	public doCalc(String value) {
 		// Parse 
 		String F1 = null, F2=null;
@@ -51,6 +52,7 @@ public class doCalc {
 		
 		for (int i = 0; i < value.length(); i++){
 		    char c = value.charAt(i);        
+		    
 		    // Test if it's numeric
 		    if (Character.isDigit(c) || (c=='.')) {
 		    	if (op==' ') {
@@ -71,15 +73,15 @@ public class doCalc {
 		    		}
 		    	}
 		    }
+		    // Else it's an operator
 		    else {
-		    	// Operator
 		    	if (op!=' ') {
 	    			// Performs calculation of F1 op F2, store result in F1, add operator
 		    		F1=calculate(F1,op,F2);
 		    		op= ' ';
 		    		F2=null;
 		    	}
-	    		op=c;
+		    	op=c;
 		    	
 		    }
 		}
@@ -110,11 +112,11 @@ public class doCalc {
 			case '/' :
 				if (res[1] != 0) {
 				returnResult=Double.toString((res[0]/res[1]));
-			}
+				}
 				else {
 					returnResult="ERROR!";
-			}
-				break;
+				}
+				
 		}
 		
 		return returnResult;

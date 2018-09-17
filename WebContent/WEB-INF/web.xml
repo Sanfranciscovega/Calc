@@ -11,11 +11,32 @@
     </jsp-property-group>
   </jsp-config>
   <servlet>
-    <servlet-name>Calc</servlet-name>
-    <servlet-class>com.flafitte.servlets.Calc</servlet-class>
+    <servlet-name>Accueil</servlet-name>
+    <servlet-class>com.flafitte.servlets.Accueil</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Calc</servlet-name>
-    <url-pattern>/FormCalc</url-pattern>
+    <servlet-name>Accueil</servlet-name>
+    <url-pattern>/Accueil.jsp</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>Upload</servlet-name>
+    <servlet-class>com.flafitte.servlets.Upload</servlet-class>
+    <multipart-config>
+      <location>C:/Users/FranciscoII/eclipse-workspace/ExercicesOCR/Upload/tmp/</location>
+      <max-file-size>10485760</max-file-size>
+      <max-request-size>52428800</max-request-size>
+      <file-size-threshold>1048576</file-size-threshold>
+    </multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Upload</servlet-name>
+    <url-pattern>/Upload.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Connexion</servlet-name>
+    <servlet-class>com.flafitte.servlets.Connexion</servlet-class>
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>Accueil</welcome-file>
+  </welcome-file-list>
 </web-app>
